@@ -7,7 +7,11 @@ public class TinyCustomer {
 	private final String city;
 	private final String phone;
 	
-	public TinyCustomer(final String customerID,final  String companyName,final  String city,final  String phone) {
+	public TinyCustomer(
+			final String customerID,
+			final  String companyName,
+			final  String city,
+			final  String phone) {
 		super();
 		this.customerID = customerID;
 		this.companyName = companyName;

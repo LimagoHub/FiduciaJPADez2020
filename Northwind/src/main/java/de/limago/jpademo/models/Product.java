@@ -152,4 +152,14 @@ public class Product implements Serializable {
 		this.supplier = supplier;
 	}
 
+	@Override
+	public String toString() {
+		return "Product [productID=" + productID + ", discontinued=" + discontinued + ", productName=" + productName
+				+ ", quantityPerUnit=" + quantityPerUnit + ", reorderLevel=" + reorderLevel + ", unitPrice=" + unitPrice
+				+ ", unitsInStock=" + unitsInStock + ", unitsOnOrder=" + unitsOnOrder + ", category=" + category
+				+ ", supplier=" + supplier + "]";
+	}
+	
+	
+
 }
