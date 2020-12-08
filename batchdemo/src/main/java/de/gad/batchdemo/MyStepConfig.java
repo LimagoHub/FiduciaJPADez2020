@@ -43,4 +43,14 @@ public class MyStepConfig {
 	              .end()
 	              .build();
 	   }
+	 
+//	 @Bean
+//	 public DataSource getDataSource() throws SQLException {
+//		 DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
+//	        //dataSourceBuilder.driverClassName("org.h2.Driver");
+//	        dataSourceBuilder.url("jdbc:mysql://localhost:3306/fiducia?allowPublicKeyRetrieval=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin&zeroDateTimeBehavior=convertToNull");
+//	        dataSourceBuilder.username("root");
+//	        dataSourceBuilder.password("yop49JZ");
+//	        return dataSourceBuilder.build();
+//		}
 }

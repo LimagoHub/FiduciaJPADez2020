@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import de.gad.batchdemo.MeineDaten;
 
 @Component
-@StepScope
+
 public class MyFlatFileReader extends FlatFileItemReader<MeineDaten> {
 
 	public MyFlatFileReader() {

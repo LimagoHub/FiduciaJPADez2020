@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import de.gad.batchdemo.MeineDaten;
 
 @Component
-@StepScope
+
 public class MeineDatenItemProcessor implements ItemProcessor<MeineDaten,MeineDaten>
 {
    @Override
