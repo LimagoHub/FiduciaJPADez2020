@@ -2,10 +2,8 @@ package de.gad.batchdemo.writers;
 
 import javax.sql.DataSource;
 
-import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import de.gad.batchdemo.MeineDaten;
