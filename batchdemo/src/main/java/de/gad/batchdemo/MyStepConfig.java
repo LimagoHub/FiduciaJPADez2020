@@ -13,8 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import de.gad.batchdemo.policies.MySkipPolicy;
 import de.gad.batchdemo.processors.MeineDatenItemProcessor;
+import de.gad.batchdemo.processors.MultiProcessor;
+import de.gad.batchdemo.processors.SchweinToMeineDatenProcessor;
 import de.gad.batchdemo.readers.MyFlatFileReader;
+import de.gad.batchdemo.readers.MyReader;
 import de.gad.batchdemo.tasklet.MeinArbeitschrittTasklet;
 import de.gad.batchdemo.writers.MeineDatenWriter;
 
@@ -34,8 +38,21 @@ public class MyStepConfig {
 				.<MeineDaten, MeineDaten>chunk(10)
 				.reader(reader)
 				.processor(processor)
-				.writer(writer).build();
+				.writer(writer)
+				.faultTolerant()
+				.skipPolicy(new MySkipPolicy())
+				.build();
 	}
+
+//	@Bean
+//	public Step csvReaderStep(MyReader reader,MultiProcessor processor, MeineDatenWriter writer) {
+//		return stepBuilderFactory
+//				.get("meinStep")
+//				.<Schwein, MeineDaten>chunk(10)
+//				.reader(reader)
+//				.processor(processor)
+//				.writer(writer).build();
+//	}
 
 	
 	 @Bean
